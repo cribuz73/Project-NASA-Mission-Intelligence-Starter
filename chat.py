@@ -8,15 +8,16 @@ and feedback collection for continuous improvement.
 
 import streamlit as st
 import os
-import json
-import pandas as pd
+import asyncio
 
 import ragas_evaluator
 import rag_client
 import llm_client
 
-from pathlib import Path
 from typing import Dict, List, Optional
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # RAGAS imports
 try:
@@ -238,10 +239,12 @@ def main():
                 # Evaluate response quality if enabled
                 if enable_evaluation and RAGAS_AVAILABLE:
                     with st.spinner("Evaluating response quality..."):
-                        evaluation_scores = evaluate_response_quality(
+                        evaluation_scores = asyncio.run(
+                            evaluate_response_quality(
                             prompt, 
                             response, 
                             contexts_list
+                            )
                         )
                         st.session_state.last_evaluation = evaluation_scores
         
