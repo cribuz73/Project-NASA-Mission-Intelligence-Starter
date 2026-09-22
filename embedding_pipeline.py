@@ -13,20 +13,17 @@ Supported data sources:
 - Challenger transcribed audio data (text files only)
 """
 
-import os
-import json
+
 import logging
 from pathlib import Path
-from typing import Dict, List, Any, Optional, Tuple
+from typing import Dict, List, Any, Tuple
+from annotated_types import doc
 import chromadb
-from chromadb.config import Settings
-import openai
 from openai import OpenAI
 import hashlib
 import time
 from datetime import datetime
 import argparse
-from chromadb.utils.embedding_functions import OpenAIEmbeddingFunction
 
 # Configure logging
 logging.basicConfig(
@@ -138,7 +135,7 @@ class ChromaEmbeddingPipelineTextOnly:
             if end >= text_length:
                 end = text_length
             else:
-                 # Try to brake the sentence.Look for nearest sentence ending within last 200 chars
+            # Try to brake the sentence.Look for nearest sentence ending within last 200 chars
                 search_window = text[start:end]
                 sentence_breaks = [
                     search_window.rfind(". "),

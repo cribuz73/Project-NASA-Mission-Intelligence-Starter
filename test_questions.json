@@ -1,0 +1,143 @@
+[
+  {
+    "question": "What were the launch dates for the Apollo 13 mission according to its onboard voice transcription?",
+    "reference_answer": "The Apollo 13 mission was flown from April 11 to 17, 1970.",
+    "reference_contexts": [
+      "The Apollo 13 mission was flown April 11 to 17, 1970."
+    ]
+  },
+  {
+    "question": "Who were the designated crew members for the Apollo 13 mission and their specific roles?",
+    "reference_answer": "The Apollo 13 crew consisted of Commander James A. (Jim) Lovell, Jr., Command Module Pilot John L. (Jack) Swigert, Jr., and Lunar Module Pilot Fred W. Haise, Jr.",
+    "reference_contexts": [
+      "Speakers in the transcript are identified as follows: Spacecraft: CDR Commander James A. (Jim) Lovell, Jr., CMP Command module pilot John L. (Jack) Swigert, Jr., LMP Lunar module pilot Fred W. Haise, Jr."
+    ]
+  },
+  {
+    "question": "What anomaly occurred with engine 5 during the Apollo 13 launch sequence?",
+    "reference_answer": "The inboard engine cut out early at 7:42, which was about 2 minutes early.",
+    "reference_contexts": [
+      "CMP: No. That's 7:42. That's 2 minutes early... CDR: GO at 6. And, Houston, what's the story on engine 5? CC: Jim, Houston. We don't have a story on why the inboard out was early, but the other engines are GO and you're GO."
+    ]
+  },
+  {
+    "question": "What was the exact launch time, date, and location for the Apollo 11 mission (AS-506)?",
+    "reference_answer": "Saturn V AS-506 (Apollo 11 Mission) was launched at 09:32:00 Eastern Daylight Time on July 16, 1969, from Kennedy Space Center, Complex 39, Pad A.",
+    "reference_contexts": [
+      "Saturn V AS-506 (Apollo 11 Mission) was launched at 09:32:00 Eastern Daylight Time on July 16, 1969, from Kennedy Space Center, Complex 39, Pad A."
+    ]
+  },
+  {
+    "question": "What orbit was the S-IVB/IU placed into during the Apollo 11 (AS-506) mission, and how was it achieved?",
+    "reference_answer": "The S-IVB/IU was placed in a solar orbit with a period of 342 days by a combination of continuous LH2 vent, a LOX dump, and APS ullage burn.",
+    "reference_contexts": [
+      "The S-IVB/IU was placed in a solar orbit with a period of 342 days by a combination of continuous LH\u2082 vent, a LOX dump and APS ullage burn."
+    ]
+  },
+  {
+    "question": "What launch azimuth and flight azimuth did the Saturn V AS-506 (Apollo 11) follow upon lift-off?",
+    "reference_answer": "The vehicle lifted off on a launch azimuth of 90 degrees east of north and rolled to a flight azimuth of 72.058 degrees east of north.",
+    "reference_contexts": [
+      "The vehicle lifted off on schedule on a launch azimuth of 90 degrees east of north and rolled to a flight azimuth of 72.058 degrees east of north."
+    ]
+  },
+  {
+    "question": "Which orbiter and flight number was designated for STS-51L, and what milestone did it represent?",
+    "reference_answer": "STS-51L was the 10th flight for the Orbiter Challenger and the 25th launch for the Space Transportation System.",
+    "reference_contexts": [
+      "This will be the 10th flight for the Orbiter Challenger and the 25th launch for the Space transportation system"
+    ]
+  },
+  {
+    "question": "Who were all the crew members and payload specialists assigned to the STS-51L mission?",
+    "reference_answer": "The STS-51L crew members were Commander Francis Dick Scobie, Pilot Michael Smith, Mission Specialists Judy Resnick, Ellison Onizuka, and Ronald McNair, Payload Specialist Greg Jarvis, and teacher/space participant Krista McAuliffe.",
+    "reference_contexts": [
+      "The 51 hour crew members are commander Francis Dick Scobie pilot Michael Smith Mission specialist Judy Resnick Ellison Onizuka Ronald McNair and payload specialist Greg Jarvis along with teacher and space participant Krista McAuliffe"
+    ]
+  },
+  {
+    "question": "What were the nominal launch window opening and closing times for STS-51L?",
+    "reference_answer": "The nominal launch window for STS-51L opened at 9:37 a.m. Eastern and closed at 12:37 p.m. Eastern (later extended to 1:07 p.m.).",
+    "reference_contexts": [
+      "The nominal launch window opens at 9:37 a.m. Eastern and closes at 12:37 p.m. Eastern",
+      "The window has been extended to 1:07 p.m. this afternoon"
+    ]
+  },
+  {
+    "question": "Why was the original STS-51L launch attempt on Saturday postponed?",
+    "reference_answer": "The launch was postponed due to unacceptable weather conditions in the area at the originally planned launch time.",
+    "reference_contexts": [
+      "The count entered an extended hold at the 11 hour mark at 6 p.m. on Friday and remained in a hold due to unacceptable weather conditions in the area at the originally planned launch time of 9:36 a.m. Saturday"
+    ]
+  },
+  {
+    "question": "What protective measure was implemented around the STS-51L vehicle during the inclement weather delay?",
+    "reference_answer": "The rotating service structure was put back into place around the vehicle to provide weather protection.",
+    "reference_contexts": [
+      "The rotating service structure was put back into place around the vehicle to provide weather protection during the inclement weather"
+    ]
+  },
+  {
+    "question": "During the Apollo 13 ascent, what peculiar physical sensation or vibration did Commander Jim Lovell report?",
+    "reference_answer": "Commander Jim Lovell reported a funny vibration during the second stage burn / TLI phase.",
+    "reference_contexts": [
+      "CDR: Yes. Hey, I got a - We got a funny vibration... LMP: Yes. Yes, there was a bit of noise, there. Yes."
+    ]
+  },
+  {
+    "question": "What guidance mode did Apollo 13 switch to during ascent as noted by the Lunar Module Pilot?",
+    "reference_answer": "They switched to Mode IV during ascent.",
+    "reference_contexts": [
+      "CDR: Remember, we're Mode IV now. LMP: Yes, I got that. Mode IV."
+    ]
+  },
+  {
+    "question": "What celestial observations did the Apollo 13 crew make when turning out the cabin floodlights on Day 1?",
+    "reference_answer": "They were able to see thunder and lightning on the horizon, the airglow layer, and stars such as Antares and Spica within or near the airglow layer.",
+    "reference_contexts": [
+      "CDR: When I turn out all the lights in just a second, you can see thunder and lightning on the horizon... you might be able to see the - the airglow... CDR: Yes, but see the - Antares is in the airglow layer... CMP: Spica's right in there, you guys."
+    ]
+  },
+  {
+    "question": "What specific propellant and fluid loading systems were evaluated in the Saturn V AS-506 (Apollo 11) launch report?",
+    "reference_answer": "The report evaluated RP-1 loading, LOX loading, LH2 loading, and Auxiliary Propulsion System (APS) propellant loading.",
+    "reference_contexts": [
+      "3.4 Propellant Loading 3.4.1 RP-1 Loading 3.4.2 LOX Loading 3.4.3 LH\u2082 Loading 3.4.4 Auxiliary Propulsion System Propellant Loading"
+    ]
+  },
+  {
+    "question": "According to the Apollo 13 transcript introduction, how are speaker pauses, self-interruptions, and interruptions by other speakers designated in the text?",
+    "reference_answer": "One dash (-) is used to indicate a speaker's pause or self-interruption, and two dashes (- -) are used to indicate an interruption by another speaker or a point where recording was abruptly terminated.",
+    "reference_contexts": [
+      "One dash (-) is used to indicate a speaker's pause or a self-interruption. Two dashes (- -) are used to indicate an interruption by another speaker or a point at which a recording was abruptly terminated."
+    ]
+  },
+  {
+    "question": "What office and individual managed the transcription of the Apollo 13 onboard magnetic tapes?",
+    "reference_answer": "Transcription of the tapes was managed by David M. Goldenbaum, Test Division, Apollo Spacecraft Program Office at the NASA Manned Spacecraft Center in Houston, Texas.",
+    "reference_contexts": [
+      "Transcription of these tapes was managed by David M. Goldenbaum, Test Division, Apollo Spacecraft Program Office, to whom questions regarding this document should be referred."
+    ]
+  },
+  {
+    "question": "What was the unique distinction of the private citizen flying aboard the STS-51L mission?",
+    "reference_answer": "It involved America's first private citizen to fly aboard the shuttle in NASA's spaceflight participation program (specifically teacher and space participant Krista McAuliffe).",
+    "reference_contexts": [
+      "Mission 51L with America's first private citizen to fly aboard the shuttle in NASA's spaceflight participation program... along with teacher and space participant Krista McAuliffe"
+    ]
+  },
+  {
+    "question": "What structure or equipment malfunction or check was performed regarding the glycol and radiator systems on Apollo 13 Day 1?",
+    "reference_answer": "The crew performed secondary radiator loop checks, opened the glycol reservoir bypass valve, and adjusted accumulator levels.",
+    "reference_contexts": [
+      "CDR: Don't forget I still got the radiators bypassed here... LMP: GLYCOL RESERVOIR BYPASS valve, OPEN... We got the secondary RAD leak check to go."
+    ]
+  },
+  {
+    "question": "Who was flying the shuttle training aircraft (STA) during the STS-51L weather evaluations on launch day?",
+    "reference_answer": "Astronaut John Young was flying the shuttle training aircraft to provide reports back on wind velocities and directions.",
+    "reference_contexts": [
+      "waiting for the reports back from astronaut John Young who is flying the shuttle training aircraft"
+    ]
+  }
+]

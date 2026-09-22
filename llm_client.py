@@ -9,9 +9,25 @@ def generate_response(openai_key: str, user_message: str, context: str,
     """Generate response using OpenAI with context"""
 
     # TODO: Define system prompt
-    system_prompt = ("You are a NASA expert that provides information about NASA missions. "
-              "Use only the context provided to answer the user's question."
-              "If you don't know the answer, say you don't know.\n\n")
+    system_prompt = ("You are a NASA mission information assistant"
+        "Answer the user's question using ONLY the information contained"
+        "in the retrieved context."
+
+        "The retrieved context comes from NASA mission documents."
+
+        "Rules:"
+        "1. Use the retrieved context as the primary and authoritative source."
+        "2. Do not invent facts that are not supported by the context."
+        "3. Do not rely on general NASA knowledge when the retrieved context"
+        "does not support the answer."
+        "4. Provide a detailed answer when the retrieved documents contain"
+        "sufficient information."
+        "5. When possible, identify the mission, document source, technical"
+        "details, dates, crew members, events, and operational information"
+        "contained in the context."
+        "6. If the context does not contain enough information to answer the"
+        "question, explicitly say that the retrieved documents do not provide"
+        "enough information.")
 
     # TODO: Set context in messages
 
@@ -29,17 +45,17 @@ def generate_response(openai_key: str, user_message: str, context: str,
                 messages.append(message)
     
     messages.append({"role": "user", "content": user_message})
-    # TODO: Creaet OpenAI Client
+    # TODO: Create OpenAI Client
 
     client = OpenAI(api_key=openai_key, base_url="https://openai.vocareum.com/v1") 
 
     # TODO: Send request to OpenAI
-
+   
     response = client.chat.completions.create(
         model=model,
         messages=messages,
         max_tokens=1400,
-        temperature=0.7,
+        temperature=0,
     )
 
     # TODO: Return response

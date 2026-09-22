@@ -6,6 +6,9 @@ Enhanced version of the simple RAG chat that includes real-time evaluation
 and feedback collection for continuous improvement.
 """
 
+import logging
+
+from langchain_openai import data
 import streamlit as st
 import os
 import asyncio
@@ -51,6 +54,7 @@ def initialize_rag_system(chroma_dir: str, collection_name: str):
 def retrieve_documents(collection, query: str, n_results: int = 3, 
                       mission_filter: Optional[str] = None) -> Optional[Dict]:
     """Retrieve relevant documents from ChromaDB with optional filtering"""
+   
     try:
         return rag_client.retrieve_documents(collection, query, n_results, mission_filter)
     except Exception as e:

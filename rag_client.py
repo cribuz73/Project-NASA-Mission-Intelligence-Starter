@@ -1,9 +1,6 @@
-from http import client
 import logging
-
 import chromadb
-from chromadb.config import Settings
-from chromadb.utils import embedding_functions
+from openai import OpenAI
 from typing import Dict, List, Optional
 from pathlib import Path
 import os
@@ -16,7 +13,6 @@ def discover_chroma_backends() -> Dict[str, Dict[str, str]]:
     backends = {}
     current_dir = Path(".")
     
-    # Look for ChromaDB directories
     # TODO: Create list of directories that match specific criteria (directory type and name pattern)
     candidate_dirs = []
     for d in current_dir.iterdir():
@@ -102,17 +98,10 @@ def initialize_rag_system(chroma_dir: str, collection_name: str):
     # TODO: Create a chomadb persistentclient
     client = chromadb.PersistentClient(path=chroma_dir)        
     
-    openai_ef = embedding_functions.OpenAIEmbeddingFunction(
-        
-        api_key=os.getenv("OPENAI_API_KEY"),
-        model_name="text-embedding-3-small",
-        api_base="https://openai.vocareum.com/v1"
-    )
-    # TODO: Return the collection with the collection_name
-    collection = client.get_collection(
-        name=collection_name,
-        embedding_function=openai_ef
-    )
+    # The collection already has an embedding function persisted in Chroma's
+    # configuration. Passing another function here causes a configuration
+    # conflict, so query embeddings are generated explicitly below.
+    collection = client.get_collection(name=collection_name)
     print(f"Initialized RAG system with collection: {collection_name} at {chroma_dir}")  # Debugging statement to confirm initialization
     return collection, True, "RAG system initialized successfully"
 
@@ -135,11 +124,20 @@ def retrieve_documents(collection, query: str, n_results: int = 3,
     # TODO: Return query results to caller
 
     try:
+            openai_client = OpenAI(
+                api_key=os.getenv("OPENAI_API_KEY"),
+                base_url="https://openai.vocareum.com/v1"
+            )
+            query_embedding = openai_client.embeddings.create(
+                model="text-embedding-3-small",
+                input=query
+            ).data[0].embedding
+
             results = collection.query(
-                query_texts=[query],
+                query_embeddings=[query_embedding],
                 n_results=n_results,
                 where=where_filter
-            ) 
+            )
             print("Query results:", results)  
 
             return results 
@@ -183,14 +181,14 @@ def format_context(documents: List[str], metadatas: List[Dict]) -> str:
         # TODO: Check document length and truncate if necessary
         # TODO: Add truncated or full document content to context parts list
 
-    max_length = 1000  # Define maximum length for document content
-    if len(doc) > max_length:
-        doc = doc[:max_length] + "... (truncated)"
+        max_length = 1000  # Define maximum length for document content
+        if len(doc) > max_length:
+            doc = doc[:max_length] + "... (truncated)"
 
         # TODO: Add truncated or full document content to context parts list
-    context_parts.append(doc.strip())
+        context_parts.append(doc.strip())
 
     # TODO: Join all context parts with newlines and return formatted string
-    print("Formatted context:", "\n".join(context_parts))  
-    
-    return "\n".join(context_parts)
+    formatted_result = "\n".join(context_parts)
+    print("Formatted context:", formatted_result)  
+    return formatted_result
